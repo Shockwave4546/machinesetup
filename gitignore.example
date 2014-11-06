@@ -1,0 +1,14 @@
+.DS_Store 
+*.komodoproject
+MANIFEST
+build/*
+dist/*
+*.log
+*.pyc
+*ipynb
+*.orig
+*BACKUP*
+*BASE*
+*REMOTE*
+*LOCAL*
+.svn
