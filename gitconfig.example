@@ -1,0 +1,36 @@
+[user]
+	email = tclancy@gmail.com
+	name = Tom Clancy
+[core]
+	excludesfile = /Users/tom/.gitignore
+	autocrlf = false
+	filemode = false
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	pu = push -u origin
+	lg = git log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative
+	accept-ours = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --ours -- $files; git add -u $files; }; f"
+	accept-theirs = "!f() { files=\"$@\"; [ -z $files ] && files='.'; git checkout --theirs -- $files; git add -u $files; }; f"
+	pr = pull --rebase
+	rbd = push origin --delete
+[gitgoggles "icons"]
+	unknown = ?
+	success = +
+	failure = -
+[merge]
+	tool = opendiff
+
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+	tool = opendiff
+[color]
+	ui = true
