@@ -14,3 +14,4 @@ TODO
 ====
 
 * alias file from cmder
+* set up SSH keys
